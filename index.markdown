@@ -47,8 +47,6 @@ layout: default
     </div>
   </div>
 
-
-
   <div class="contact-app">
     <h1 class="contact-title">Contact Manager</h1>
     <div class="contact-description-container">
@@ -75,6 +73,7 @@ layout: default
     </div> 
     <div class="sinatra-stack">
       <a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/8dac650006498fb91d4099890d9d5e983aa6d0f2c3ff13cc6caf1f6b3b03b90b/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f527562792d4343333432443f6c6f676f3d72756279266c6f676f436f6c6f723d666666267374796c653d666c6174"><img src="https://camo.githubusercontent.com/8dac650006498fb91d4099890d9d5e983aa6d0f2c3ff13cc6caf1f6b3b03b90b/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f527562792d4343333432443f6c6f676f3d72756279266c6f676f436f6c6f723d666666267374796c653d666c6174" alt="Ruby Badge" data-canonical-src="https://img.shields.io/badge/Ruby-CC342D?logo=ruby&amp;logoColor=fff&amp;style=flat" style="max-width: 100%;"></a>
+      <a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/2870279a67ba4b35879bd9fd72eec0611bd019c9676e76c1b497d0a37b25deac/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5275627925323053696e617472612d3030303f6c6f676f3d7275627973696e61747261266c6f676f436f6c6f723d666666267374796c653d666c6174"><img src="https://camo.githubusercontent.com/2870279a67ba4b35879bd9fd72eec0611bd019c9676e76c1b497d0a37b25deac/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5275627925323053696e617472612d3030303f6c6f676f3d7275627973696e61747261266c6f676f436f6c6f723d666666267374796c653d666c6174" alt="Sinatra Badge" data-canonical-src="https://img.shields.io/badge/Sinatra-000?logo=sinatra&amp;logoColor=fff&amp;style=flat" style="max-width: 100%;"></a>
       <a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/a96c2704a36e1ab93f2d0d03b60a88e333f4df9c8202797c99e67af4d4ff4ac9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f48544d4c352d4533344632363f6c6f676f3d68746d6c35266c6f676f436f6c6f723d666666267374796c653d666c6174"><img src="https://camo.githubusercontent.com/a96c2704a36e1ab93f2d0d03b60a88e333f4df9c8202797c99e67af4d4ff4ac9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f48544d4c352d4533344632363f6c6f676f3d68746d6c35266c6f676f436f6c6f723d666666267374796c653d666c6174" alt="HTML5 Badge" data-canonical-src="https://img.shields.io/badge/HTML5-E34F26?logo=html5&amp;logoColor=fff&amp;style=flat" style="max-width: 100%;"></a>
       <a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/ecb218c4c57d35463785d6b50dd132361786a5b5d4ddcae8314eea9d99c45b6a/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f435353332d3135373242363f6c6f676f3d63737333266c6f676f436f6c6f723d666666267374796c653d666c6174"><img src="https://camo.githubusercontent.com/ecb218c4c57d35463785d6b50dd132361786a5b5d4ddcae8314eea9d99c45b6a/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f435353332d3135373242363f6c6f676f3d63737333266c6f676f436f6c6f723d666666267374796c653d666c6174" alt="CSS3 Badge" data-canonical-src="https://img.shields.io/badge/CSS3-1572B6?logo=css3&amp;logoColor=fff&amp;style=flat" style="max-width: 100%;"></a> 
     </div>
