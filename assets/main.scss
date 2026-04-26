@@ -1,0 +1,175 @@
+---
+---
+@import "minima";
+
+body, html {
+  font-family: "Gill Sans", sans-serif !important;
+}
+
+h4 {
+  justify-content: flex-start;
+  align-content: flex-center;
+  text-align: left;
+}
+
+.site-title {
+  font-weight: bold;
+}
+
+.site-footer {
+  text-align: right;
+}
+
+.footer-col-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.footer-col {
+  float: none !important;
+  width: auto !important;
+  margin-left: 30px !important;
+}
+
+/* Ensure headings and lists also align right if they have their own alignments */
+.footer-heading, .contact-list, .social-media-list {
+  text-align: right;
+}
+
+.projects-title, 
+.about-title {
+  font-weight: bold;
+}
+
+.pet-feeder-tracker-app,
+.contact-app,
+.sinatra-app {
+  display: flex;
+  border-color: burlywood;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 30px;
+  box-shadow: 12px 12px 2px 1px rgba(113, 90, 61, 0.3);
+  box-sizing: border-box;
+  background-color: rgb(234, 207, 172);
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pet-feeder-tracker-app-title,
+.contact-title,
+.sinatra-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-underline-offset: 4px;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+.pet-feeder-tracker-app-stack,
+.contact-stack,
+.sinatra-stack {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-self: flex-start;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.pet-feeder-tracker-app-title a,
+.pet-feeder-tracker-app-title a:visited  {
+  color: black;
+  transition: font-size 0.2s ease-in-out; /* Adds a smooth animation */
+}
+
+.pet-feeder-tracker-app-title a:hover {
+  font-size: 110%;
+  color: black;
+}
+
+.pet-feeder-tracker-app-description-container,
+.contact-description-container,
+.sinatra-description-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: flex-start;
+  width: 100%;
+  gap: 50px;
+  margin-top: 15px;
+}
+
+.pet-feeder-tracker-app-button-container,
+.contact-button-container,
+.sinatra-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-self: flex-start;
+  width: 100%;
+  margin-bottom: 20px;
+  gap: 20px;
+  text-underline-offset: 2px;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-underline-position: under;
+}
+
+.pet-feeder-tracker-app-button-container a,
+.pet-feeder-tracker-app-button-container a:visited,
+.contact-button-container a,
+.contact-button-container a:visited,
+.sinatra-button-container a,
+.sinatra-button-container a:visited {
+  color: black;
+  transition: font-size 0.2s ease-in-out; /* Adds a smooth animation */
+}
+
+.pet-feeder-tracker-app-button-container a:hover,
+.contact-button-container a:hover,
+.sinatra-button-container a:hover {
+  font-size: 110%;
+  color: black;
+}
+
+.pet-feeder-tracker-app-image {
+  width: 80%;
+  max-width: 150px;
+  height: auto;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-bottom: 15px;;
+}
+
+
+
+/* Makes an element break out of its container to span the full viewport width */
+.full-width-divider {
+  border: none;
+  border-top: 1px solid #ccc;
+  /* 50% of the container width minus 50% of the viewport width pulls the margins to the exact screen edges */
+  margin: 40px calc(50% - 50vw);
+  max-width: 100vw;
+}
+
+.projects-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.pet-feeder-tracker-app,
+.contact-app,
+.sinatra-app {
+  flex: 1 1 calc(45% - 20px); /* This makes each card take up roughly half the width */
+  min-width: 300px; /* This prevents them from getting too narrow on small screens */
+}
