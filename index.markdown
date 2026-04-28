@@ -14,7 +14,7 @@ layout: default
     I am passionate about building web applications. I have experience in both frontend and backend development, and I love deconstructing problems and tackling challenges while working with the latest technologies. 
   </h3>
   <h3>
-    In my free time, I love researching cat 😼 behavior, doing core exercises 💪 yoga.
+    In my free time, I love researching cat 😼 behavior, doing core exercises 💪, and yoga.
   </h3>
 </div>
 
