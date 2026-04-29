@@ -7,15 +7,22 @@ layout: default
 
 <div class="about-section">
   <h1 class="about-title">About Me</h1>
-  <h3>
-    I am a Ruby on Rails developer based in Taiwan with a background in chemistry. 
-  </h3>
-  <h3>
-    I am passionate about building web applications. I have experience in both frontend and backend development, and I love deconstructing problems and tackling challenges while working with the latest technologies. 
-  </h3>
-  <h3>
-    In my free time, I love researching cat 😼 behavior, doing core exercises 💪, and yoga.
-  </h3>
+  <div class="about-description-container">
+    <div>
+      <img src="/assets/images/about.jpg" alt="Rita" class="about-image-img" />
+    </div>
+    <div class="about-text">
+      <h3>
+        I am a Ruby on Rails developer based in Taiwan with a background in chemistry. 
+      </h3>
+      <h3>
+        I am passionate about building web applications. I have experience in both frontend and backend development, and I love deconstructing problems and tackling challenges while working with the latest technologies. 
+      </h3>
+      <h3>
+        In my free time, I love researching cat 😼 behavior, doing core exercises 💪, and yoga.
+      </h3>
+    </div>
+  </div>
 </div>
 
 <hr class="full-width-divider" />

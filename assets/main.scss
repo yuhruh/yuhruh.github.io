@@ -4,12 +4,33 @@
 
 body, html {
   font-family: "Gill Sans", sans-serif !important;
+  
 }
 
 h4 {
   justify-content: flex-start;
   align-content: flex-center;
   text-align: left;
+}
+
+.about-description-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.about-image-img {
+  width: 500px;
+  height: auto;
+  border-radius: 50px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.about-text {
+  max-width: 600px;
 }
 
 .site-title {
@@ -143,7 +164,7 @@ h4 {
   height: auto;
   border-radius: 20px;
   margin-top: 10px;
-  margin-bottom: 15px;;
+  margin-bottom: 15px;
 }
 
 
