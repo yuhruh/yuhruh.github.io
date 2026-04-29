@@ -9,7 +9,7 @@ layout: default
   <h1 class="about-title">About Me</h1>
   <div class="about-description-container">
     <div>
-      <img src="/assets/images/about.jpg" alt="Rita" class="about-image-img" style="flex: 1; min-width: 300px;" />
+      <img src="/assets/images/about.jpg" alt="Rita" class="about-image-img" style="flex: 1; min-width: 150px;" />
     </div>
     <div class="about-text" style="flex: 2; min-width: 300px;">
       <h3>
