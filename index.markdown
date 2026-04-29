@@ -8,10 +8,10 @@ layout: default
 <div class="about-section">
   <h1 class="about-title">About Me</h1>
   <div class="about-description-container">
-    <div style="flex: 1; min-width: 300px;">
+    <div>
       <img src="/assets/images/about.jpg" alt="Rita" class="about-image-img" />
     </div>
-    <div class="about-text" style="flex: 2; min-width: 300px;">
+    <div class="about-text">
       <h3>
         I am a Ruby on Rails developer based in Taiwan with a background in chemistry. 
       </h3>
