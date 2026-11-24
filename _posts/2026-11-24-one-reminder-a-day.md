@@ -1,5 +1,6 @@
 ---
 layout: post
+permalink: /notes/one-reminder-a-day/
 title: "One reminder a day, even when the job runs twice"
 description: >-
   How Household Tracker uses unique indexes as locks so each family member gets exactly one
