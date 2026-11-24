@@ -112,10 +112,12 @@ layout: default
         <ul class="tags" aria-label="Tech stack">
           {%- for t in p.stack %}<li>{{ t }}</li>{% endfor %}
         </ul>
-        <p class="card-links mono">
-          {%- if p.live %}<a href="{{ p.live }}" target="_blank" rel="noopener">live ↗</a>{% endif %}
-          {%- if p.source %}<a href="{{ p.source }}" target="_blank" rel="noopener">source ↗</a>{% endif %}
-        </p>
+        <div class="card-actions">
+          {%- if p.source %}<a class="btn btn-sm btn-primary" href="{{ p.source }}" target="_blank" rel="noopener">View code ↗</a>{% endif %}
+          {%- if p.live %}<a class="btn btn-sm" href="{{ p.live }}" target="_blank" rel="noopener">Live app ↗</a>{% endif %}
+          {%- for d in p.docs %}<a class="btn btn-sm" href="{{ d.url }}" target="_blank" rel="noopener">{{ d.label }} ↗</a>{% endfor %}
+          {%- if p.ci_badge %}<a class="ci-badge" href="{{ p.ci_url }}" target="_blank" rel="noopener"><img src="{{ p.ci_badge }}" alt="{{ p.name }} CI status" height="20" loading="lazy"></a>{% endif %}
+        </div>
       </div>
     </article>
     {%- endif %}
@@ -166,8 +168,23 @@ layout: default
   </ul>
 </section>
 
+{%- if site.posts.size > 0 %}
+<section id="notes" class="section" aria-labelledby="notes-title">
+  <h2 id="notes-title" class="section-title"><span class="section-num mono">05</span>Engineering notes</h2>
+  <ul class="rows">
+    {%- for post in site.posts %}
+    <li class="row">
+      <a class="row-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      {%- if post.description %}<span class="row-desc">{{ post.description }}</span>{% endif %}
+      <span class="row-meta mono">{{ post.date | date: "%Y-%m-%d" }}{% if post.tags.size > 0 %} · {{ post.tags | join: " · " }}{% endif %}</span>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+{%- endif %}
+
 <section id="about" class="section" aria-labelledby="about-title">
-  <h2 id="about-title" class="section-title"><span class="section-num mono">05</span>About</h2>
+  <h2 id="about-title" class="section-title"><span class="section-num mono">{% if site.posts.size > 0 %}06{% else %}05{% endif %}</span>About</h2>
   <div class="about prose">
     <p>
       Before software I spent ten years in process and R&amp;D engineering, most recently as a global

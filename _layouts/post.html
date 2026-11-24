@@ -1,0 +1,34 @@
+---
+layout: default
+---
+<article class="post" itemscope itemtype="https://schema.org/BlogPosting">
+  <p class="post-back mono"><a href="{{ '/#notes' | relative_url }}">← all notes</a></p>
+  <header class="post-header">
+    <h1 class="post-title" itemprop="headline">{{ page.title | escape }}</h1>
+    {%- if page.description %}
+    <p class="post-dek">{{ page.description }}</p>
+    {%- endif %}
+    <p class="post-meta mono">
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%B %-d, %Y" }}</time>
+      {%- assign words = content | number_of_words %} · {{ words | divided_by: 200 | plus: 1 }} min read
+    </p>
+    {%- if page.tags.size > 0 %}
+    <ul class="tags" aria-label="Topics">
+      {%- for t in page.tags %}<li>{{ t }}</li>{% endfor %}
+    </ul>
+    {%- endif %}
+  </header>
+
+  <div class="post-content prose" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  <footer class="post-footer">
+    <p>Written by {{ site.author }}, a full-stack engineer. {{ site.availability }}.</p>
+    <ul class="hero-links">
+      <li><a class="btn btn-primary" href="mailto:{{ site.email }}">Email me</a></li>
+      <li><a class="btn" href="{{ site.resume_url }}" target="_blank" rel="noopener">Résumé</a></li>
+      <li><a class="btn" href="{{ '/' | relative_url }}">Portfolio</a></li>
+    </ul>
+  </footer>
+</article>

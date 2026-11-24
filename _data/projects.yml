@@ -9,6 +9,11 @@
   video_label: A 100-second walkthrough of Household Tracker on a phone
   live: https://household-tracker.up.railway.app
   source: https://github.com/yuhruh/HouseHold_Notification
+  ci_badge: https://github.com/yuhruh/HouseHold_Notification/actions/workflows/ci.yml/badge.svg
+  ci_url: https://github.com/yuhruh/HouseHold_Notification/actions/workflows/ci.yml
+  docs:
+    - label: Design decisions (6 ADRs)
+      url: https://github.com/yuhruh/HouseHold_Notification/tree/main/docs/adr
   summary: >-
     A shared bill tracker (PWA) in zh-TW and English that replaced my family's Google Sheet.
   metrics:
@@ -30,6 +35,11 @@
   image: /assets/images/ajiLogo.png
   live: https://pet-feeding-tracker-v4.up.railway.app
   source: https://github.com/yuhruh/Pet_Feeding_Tracker_v4
+  ci_badge: https://github.com/yuhruh/Pet_Feeding_Tracker_v4/actions/workflows/ci.yml/badge.svg
+  ci_url: https://github.com/yuhruh/Pet_Feeding_Tracker_v4/actions/workflows/ci.yml
+  docs:
+    - label: Architecture
+      url: https://github.com/yuhruh/Pet_Feeding_Tracker_v4/blob/main/ARCHITECTURE.md
   summary: >-
     A Rails 8 pet-care app for households, on web, PWA and Android.
   metrics:
