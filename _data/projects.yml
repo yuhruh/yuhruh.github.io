@@ -3,6 +3,9 @@
   year: "2026"
   featured: true
   image: /assets/images/householdLogo.png
+  video: /assets/videos/household-intro.mp4
+  poster: /assets/images/household-intro-poster.jpg
+  video_label: A 100-second walkthrough of Household Tracker on a phone
   live: https://household-tracker.up.railway.app
   source: https://github.com/yuhruh/HouseHold_Notification
   summary: >-

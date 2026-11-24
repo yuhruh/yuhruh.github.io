@@ -43,7 +43,16 @@ layout: default
   <div class="featured">
     {%- for p in site.data.projects %}
     {%- if p.featured %}
-    <article class="card">
+    <article class="card{% if p.video %} has-media{% endif %}">
+      {%- if p.video %}
+      <div class="card-media">
+        <video controls playsinline muted preload="none" poster="{{ p.poster | relative_url }}" aria-label="{{ p.video_label | default: p.name }}">
+          <source src="{{ p.video | relative_url }}" type="video/mp4">
+          <a href="{{ p.video | relative_url }}">Watch the {{ p.name }} walkthrough</a>
+        </video>
+      </div>
+      {%- endif %}
+      <div class="card-body">
       <header class="card-head">
         <div>
           <h3 class="card-title">{{ p.name }}</h3>
@@ -66,6 +75,7 @@ layout: default
         {%- if p.live %}<a href="{{ p.live }}" target="_blank" rel="noopener">live ↗</a>{% endif %}
         {%- if p.source %}<a href="{{ p.source }}" target="_blank" rel="noopener">source ↗</a>{% endif %}
       </p>
+      </div>
     </article>
     {%- endif %}
     {%- endfor %}
