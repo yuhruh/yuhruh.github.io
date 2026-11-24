@@ -160,16 +160,18 @@ p { margin: 0 0 0.9em; }
   box-shadow: var(--shadow); overflow: hidden;
 }
 .card-body { display: flex; flex-direction: column; padding: 24px 28px; }
-.card.has-media { display: grid; grid-template-columns: 300px minmax(0, 1fr); }
+.card.has-media { display: grid; grid-template-columns: 260px minmax(0, 1fr); }
 .card-media {
   display: flex; align-items: center; justify-content: center;
-  padding: 28px 24px;
+  padding: 24px;
   background: var(--media-bg);
+  min-width: 0; overflow: hidden;
 }
 .card:not(.has-media) .bullets { columns: 2; column-gap: 36px; }
 .card:not(.has-media) .bullets li { break-inside: avoid; }
 .card-media video {
-  display: block; height: 460px; max-height: 70vh; width: auto; aspect-ratio: 9 / 16;
+  display: block; width: 100%; max-width: 200px; height: auto;
+  aspect-ratio: 9 / 16; object-fit: contain;
   border-radius: 14px; background: #dce9f8;
   box-shadow: 0 6px 20px rgba(16, 18, 24, 0.18);
 }
