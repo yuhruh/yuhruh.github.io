@@ -1,6 +1,7 @@
 # Featured projects, newest first. `featured: true` shows the large card; others are listed compactly.
+# Bullets and numbers mirror the résumé.
 - name: Household Tracker
-  year: "2026"
+  year: 2026.10 — Present
   featured: true
   image: /assets/images/householdLogo.png
   video: /assets/videos/household-intro.mp4
@@ -9,32 +10,40 @@
   live: https://household-tracker.up.railway.app
   source: https://github.com/yuhruh/HouseHold_Notification
   summary: >-
-    An installable web app (PWA) that replaced my family's Google Sheet of household bills.
-    Shared ledgers for a home or a company, with reminders before anything is due.
-  highlights:
-    - Daily reminder digest for every member by Web Push, email and an in-app inbox.
-    - Gas, electricity and water bills fill themselves in from the utility's site or bill emails, and are marked paid when the company says so.
-    - Scans Taiwan convenience-store bill barcodes and e-invoice QR codes to fill in records.
-    - Tracks household supplies and predicts the run-out date, with a restock alert in time to buy more.
-    - Recurring bills, receipt photos, expense charts, CSV import/export and a weekly Google Drive backup.
-  stack: [Rails 8, Hotwire, PostgreSQL, Web Push, PWA, Railway, i18n (zh-TW / EN)]
+    A shared bill tracker (PWA) in zh-TW and English that replaced my family's Google Sheet.
+  metrics:
+    - In daily use
+    - ~365 tests
+    - zh-TW / EN
+  points:
+    - lead: Sheet to product
+      text: Shared ledgers with one-step bill entry by scanning a Taiwan bill's barcode, recurring bills that never duplicate, expense charts, and a preview-then-commit CSV import that is safe to re-run.
+    - lead: Reliable reminders
+      text: One daily digest per member in their own time zone, by Web Push, email and in-app inbox. Unique indexes act as locks so a double run never sends twice, and push counts as delivered only after the device confirms it.
+    - lead: Operations and testing
+      text: Encrypted weekly database backups plus a Google Drive backup. Brakeman, RuboCop and dependency audits run in GitHub Actions.
+  stack: [Rails 8.1, PostgreSQL, Hotwire, Web Push, Tailwind CSS, Solid Queue, Apache ECharts, Sentry, Railway]
 
-- name: Pet Feeding Tracker
-  year: "2025 — 2026"
+- name: Pet Tracker
+  year: 2025.02 — Present
   featured: true
   image: /assets/images/ajiLogo.png
   live: https://pet-feeding-tracker-v4.up.railway.app
   source: https://github.com/yuhruh/Pet_Feeding_Tracker_v4
   summary: >-
-    Started as a spreadsheet for my cats' meals, now in its fourth version: a feeding, health and
-    care tracker that a household shares, with a web app, a PWA and an Android app.
-  highlights:
-    - Scores each food from hunger, enjoyment, leftovers and how often the pet comes back to it, and keeps a favorites list.
-    - Predicts when each dry-food bag runs out from how fast the pet eats.
-    - Caregivers log feeding, litter, water and medicine with one tap, and every member's page updates live.
-    - A monthly job checks Taiwan shop prices for the favorite kibbles and ranks them by price per kg.
-    - Reads vet checkup photos with Google Gemini; reminders go out by Android push, LINE or email.
-  stack: [Rails 8.1, Hotwire, Hotwire Native (Android), Solid Queue, Solid Cable, PostgreSQL, Tailwind CSS, Gemini API, Railway]
+    A Rails 8 pet-care app for households, on web, PWA and Android.
+  metrics:
+    - In daily use
+    - ~570 tests (56 browser)
+    - Web · PWA · Android
+  points:
+    - lead: Live, shared UI
+      text: Owners invite caregivers and share read-only links, with one role policy behind every permission. One-tap care logs appear live on everyone's page via Turbo Streams.
+    - lead: Background work
+      text: Reminders at each household's local time with fallback from Android push to LINE to email, plus a monthly Nokogiri job that ranks favorite kibbles by price per kg.
+    - lead: Unstructured to structured
+      text: Health-checkup photos become records through Gemini vision and validated mapping into ActiveRecord models, with security audits in CI.
+  stack: [Rails 8.1, PostgreSQL, Hotwire, Hotwire Native (Kotlin), Tailwind CSS, Solid Queue, Nokogiri, Gemini, Railway]
 
 - name: Contact Manager
   source: https://github.com/yuhruh/contact-manager

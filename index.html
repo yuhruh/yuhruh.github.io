@@ -4,37 +4,73 @@ layout: default
 
 <section class="hero" aria-labelledby="hero-name">
   <div class="hero-text">
-    <p class="eyebrow mono">$ whoami</p>
-    <h1 id="hero-name">Rita Huang</h1>
-    <p class="hero-role">Full-stack software engineer · Ruby on Rails &amp; TypeScript · Taiwan</p>
-    <p class="hero-lede">
-      I build products end to end: the web and mobile apps people use, and the APIs, background jobs
-      and AI pipelines behind them. I came to software from chemistry, and I still work like it's a lab:
-      reproduce the problem, find the root cause, fix it, then verify on every platform.
+    <p class="status">
+      <span class="status-dot" aria-hidden="true"></span>
+      <span>{{ site.availability }}</span>
     </p>
+    <h1 id="hero-name">Rita Huang</h1>
+    <p class="hero-role">{{ site.role }} · TypeScript, React, NestJS, Ruby on Rails</p>
+    <p class="hero-lede">
+      I build production software across API, web and mobile: TypeScript / NestJS services on PostgreSQL
+      with React and React Native clients, plus two Ruby on Rails 8 apps of my own in daily production use.
+      I came to software after a decade of process and R&amp;D engineering, so I start every bug with the
+      root cause.
+    </p>
+    <ul class="facts mono">
+      <li><span class="fact-label">Location</span>{{ site.location }}</li>
+      <li><span class="fact-label">Hours</span>{{ site.work_hours }}</li>
+    </ul>
     <ul class="hero-links">
       <li><a class="btn btn-primary" href="{{ site.resume_url }}" target="_blank" rel="noopener">Résumé</a></li>
-      <li><a class="btn" href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">GitHub</a></li>
-      <li><a class="btn" href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener">LinkedIn</a></li>
       <li><a class="btn" href="mailto:{{ site.email }}">Email</a></li>
+      <li><a class="btn" href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a class="btn" href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">GitHub</a></li>
     </ul>
   </div>
   <img class="hero-photo" src="{{ '/assets/images/about.jpg' | relative_url }}" alt="Portrait of Rita Huang" width="200" height="200">
 </section>
 
-<section id="what-i-do" class="section" aria-labelledby="what-title">
-  <h2 id="what-title" class="section-title"><span class="section-num mono">01</span>What I do</h2>
-  <div class="capabilities">
-    {%- for c in site.data.capabilities %}
-    <article class="capability">
-      <h3 class="capability-title">{{ c.title }}</h3>
-      <p>{{ c.summary }}</p>
-      <ul class="tags">
-        {%- for t in c.tags %}<li>{{ t }}</li>{% endfor %}
-      </ul>
-    </article>
+<ul class="stats" aria-label="At a glance">
+  {%- for s in site.data.stats %}
+  <li><strong>{{ s.value }}</strong><span>{{ s.label }}</span></li>
+  {%- endfor %}
+</ul>
+
+<section id="experience" class="section" aria-labelledby="experience-title">
+  <h2 id="experience-title" class="section-title"><span class="section-num mono">01</span>Experience</h2>
+  <ol class="timeline">
+    {%- for j in site.data.experience %}
+    <li class="job">
+      <div class="job-meta mono">{{ j.period }}</div>
+      <div class="job-body">
+        <h3 class="job-title">{{ j.role }} <span class="job-org">· {{ j.org }}</span></h3>
+        {%- if j.note or j.tagline %}
+        <p class="job-sub">{% if j.note %}{{ j.note }}{% endif %}{% if j.note and j.tagline %} · {% endif %}{% if j.tagline %}{{ j.tagline }}{% endif %}</p>
+        {%- endif %}
+        <ul class="bullets">
+          {%- for pt in j.points %}
+          <li>{% if pt.lead %}<strong>{{ pt.lead }}:</strong> {% endif %}{{ pt.text }}</li>
+          {%- endfor %}
+        </ul>
+        {%- if j.stack %}
+        <ul class="tags" aria-label="Tech stack">
+          {%- for t in j.stack %}<li>{{ t }}</li>{% endfor %}
+        </ul>
+        {%- endif %}
+      </div>
+    </li>
     {%- endfor %}
-  </div>
+  </ol>
+
+  <h3 class="subhead mono">Education</h3>
+  <ul class="rows">
+    {%- for e in site.data.education %}
+    <li class="row row-split">
+      <span><strong>{{ e.school }}</strong> · {{ e.degree }}</span>
+      <span class="row-meta mono">{{ e.period }}</span>
+    </li>
+    {%- endfor %}
+  </ul>
 </section>
 
 <section id="projects" class="section" aria-labelledby="projects-title">
@@ -46,35 +82,40 @@ layout: default
     <article class="card{% if p.video %} has-media{% endif %}">
       {%- if p.video %}
       <div class="card-media">
-        <video controls playsinline muted preload="none" poster="{{ p.poster | relative_url }}" aria-label="{{ p.video_label | default: p.name }}">
+        <video width="200" height="356" controls playsinline muted preload="none" poster="{{ p.poster | relative_url }}" aria-label="{{ p.video_label | default: p.name }}">
           <source src="{{ p.video | relative_url }}" type="video/mp4">
           <a href="{{ p.video | relative_url }}">Watch the {{ p.name }} walkthrough</a>
         </video>
       </div>
       {%- endif %}
       <div class="card-body">
-      <header class="card-head">
-        <div>
-          <h3 class="card-title">{{ p.name }}</h3>
-          <p class="card-year mono">{{ p.year }}</p>
-        </div>
-        {%- if p.image %}
-        <img class="card-logo" src="{{ p.image | relative_url }}" alt="" width="56" height="56">
+        <header class="card-head">
+          <div>
+            <h3 class="card-title">{{ p.name }}</h3>
+            <p class="card-year mono">{{ p.year }}</p>
+          </div>
+          {%- if p.image %}
+          <img class="card-logo" src="{{ p.image | relative_url }}" alt="" width="56" height="56">
+          {%- endif %}
+        </header>
+        <p>{{ p.summary }}</p>
+        {%- if p.metrics %}
+        <ul class="metrics mono" aria-label="Key facts">
+          {%- for m in p.metrics %}<li>{{ m }}</li>{% endfor %}
+        </ul>
         {%- endif %}
-      </header>
-      <p>{{ p.summary }}</p>
-      <ul class="bullets">
-        {%- for h in p.highlights %}
-        <li>{{ h }}</li>
-        {%- endfor %}
-      </ul>
-      <ul class="tags" aria-label="Tech stack">
-        {%- for t in p.stack %}<li>{{ t }}</li>{% endfor %}
-      </ul>
-      <p class="card-links mono">
-        {%- if p.live %}<a href="{{ p.live }}" target="_blank" rel="noopener">live ↗</a>{% endif %}
-        {%- if p.source %}<a href="{{ p.source }}" target="_blank" rel="noopener">source ↗</a>{% endif %}
-      </p>
+        <ul class="bullets">
+          {%- for pt in p.points %}
+          <li><strong>{{ pt.lead }}:</strong> {{ pt.text }}</li>
+          {%- endfor %}
+        </ul>
+        <ul class="tags" aria-label="Tech stack">
+          {%- for t in p.stack %}<li>{{ t }}</li>{% endfor %}
+        </ul>
+        <p class="card-links mono">
+          {%- if p.live %}<a href="{{ p.live }}" target="_blank" rel="noopener">live ↗</a>{% endif %}
+          {%- if p.source %}<a href="{{ p.source }}" target="_blank" rel="noopener">source ↗</a>{% endif %}
+        </p>
       </div>
     </article>
     {%- endif %}
@@ -95,22 +136,8 @@ layout: default
   </ul>
 </section>
 
-<section id="open-source" class="section" aria-labelledby="oss-title">
-  <h2 id="oss-title" class="section-title"><span class="section-num mono">03</span>Open source</h2>
-  <ul class="rows">
-    {%- for c in site.data.open_source %}
-    <li class="row">
-      <a class="row-title" href="{{ c.url }}" target="_blank" rel="noopener">{{ c.title }} ↗</a>
-      <span class="row-meta mono">
-        {{ c.repo }} · {{ c.date }} · <span class="pill pill-{{ c.status }}">{{ c.status }}</span>
-      </span>
-    </li>
-    {%- endfor %}
-  </ul>
-</section>
-
 <section id="skills" class="section" aria-labelledby="skills-title">
-  <h2 id="skills-title" class="section-title"><span class="section-num mono">04</span>Skills</h2>
+  <h2 id="skills-title" class="section-title"><span class="section-num mono">03</span>Skills</h2>
   <dl class="skills">
     {%- for s in site.data.skills %}
     <div class="skill-row">
@@ -125,20 +152,40 @@ layout: default
   </dl>
 </section>
 
+<section id="open-source" class="section" aria-labelledby="oss-title">
+  <h2 id="oss-title" class="section-title"><span class="section-num mono">04</span>Open source</h2>
+  <ul class="rows">
+    {%- for c in site.data.open_source %}
+    <li class="row">
+      <a class="row-title" href="{{ c.url }}" target="_blank" rel="noopener">{{ c.title }} ↗</a>
+      <span class="row-meta mono">
+        {{ c.repo }} · {{ c.date }} · <span class="pill pill-{{ c.status }}">{{ c.status }}</span>
+      </span>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+
 <section id="about" class="section" aria-labelledby="about-title">
   <h2 id="about-title" class="section-title"><span class="section-num mono">05</span>About</h2>
   <div class="about prose">
     <p>
-      I'm a Ruby on Rails developer based in Taiwan with a background in chemistry. Most of my side
-      projects start with a spreadsheet at home that has outgrown itself: my family's household bills
-      became Household Tracker, and my cats' feeding log became Pet Feeding Tracker.
-    </p>
-    <p>
-      I like deconstructing problems, writing down the root cause before the fix, and shipping in small,
-      reviewable steps. I also contribute to the Rails ecosystem, mostly fixes and zh-TW translations.
+      Before software I spent ten years in process and R&amp;D engineering, most recently as a global
+      process engineer. That's where I learned to work from noisy real-world data to a root cause and a fix
+      that lasts. Most of my own projects start with a spreadsheet at home that has outgrown itself: my
+      family's bills became Household Tracker, and my cats' feeding log became Pet Tracker.
     </p>
     <p>
       Away from the keyboard I read up on cat behavior 😼, do core workouts 💪 and practice yoga.
     </p>
   </div>
+</section>
+
+<section class="cta" aria-labelledby="cta-title">
+  <h2 id="cta-title">Hiring for a full-stack role?</h2>
+  <p>{{ site.availability }}. {{ site.work_hours }}.</p>
+  <ul class="hero-links">
+    <li><a class="btn btn-primary" href="mailto:{{ site.email }}">Email me</a></li>
+    <li><a class="btn" href="{{ site.resume_url }}" target="_blank" rel="noopener">Résumé</a></li>
+  </ul>
 </section>

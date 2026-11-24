@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}?v={{ site.time | date: '%s' }}">
     {%- feed_meta %}
   </head>
 
@@ -29,10 +29,11 @@
       <div class="topbar-inner">
         <a class="brand" href="{{ '/' | relative_url }}"><span class="brand-prompt">~/</span>rita-huang</a>
         <nav class="nav" aria-label="Sections">
-          <a href="{{ '/#what-i-do' | relative_url }}">what&nbsp;i&nbsp;do</a>
+          <a href="{{ '/#experience' | relative_url }}">experience</a>
           <a href="{{ '/#projects' | relative_url }}">projects</a>
+          <a href="{{ '/#skills' | relative_url }}">skills</a>
           <a href="{{ '/#open-source' | relative_url }}">open&nbsp;source</a>
-          <a href="{{ '/#about' | relative_url }}">about</a>
+          <a href="mailto:{{ site.email }}" class="nav-cta">hire&nbsp;me</a>
         </nav>
       </div>
     </header>

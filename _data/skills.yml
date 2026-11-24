@@ -1,10 +1,11 @@
+# Mirrors the résumé's Technical Skills section.
 - group: Languages
-  items: [Ruby, TypeScript, JavaScript, SQL, HTML, CSS]
-- group: Backend
-  items: [Ruby on Rails, NestJS, Sinatra, PostgreSQL, SQLite, Redis, Solid Queue]
+  items: [TypeScript, "JavaScript (ES6+)", Ruby, SQL, HTML / CSS]
 - group: Frontend & mobile
-  items: ["Hotwire (Turbo, Stimulus)", Hotwire Native, Tailwind CSS, Vite, PWA, Web Push]
-- group: AI & integrations
-  items: [OpenAI Agents SDK, Gemini API, "OAuth (Google, Apple, LINE, GitHub)", Firebase, App Store / Google Play billing]
-- group: Infrastructure
-  items: [Docker, Railway, Render, Heroku, Git & GitHub]
+  items: [React, React Native, Tailwind CSS, "Hotwire (Turbo / Stimulus)", PWA / Web Push, Apache ECharts]
+- group: Backend
+  items: [NestJS, Node, RESTful API design, Ruby on Rails 8, ActiveRecord, Solid Queue, OAuth, Webhooks]
+- group: Data, infra & quality
+  items: [PostgreSQL, Railway / Render / Heroku, Sentry, GitHub Actions, Minitest, Brakeman, RuboCop]
+- group: AI
+  items: [Gemini vision & API / CLI, LLM agent tooling, Claude Code]

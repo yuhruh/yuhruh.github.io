@@ -1,0 +1,9 @@
+# Headline numbers under the hero. Only use figures that are on the résumé.
+- value: "10 yrs"
+  label: process & R&D engineering before software
+- value: "2"
+  label: apps of my own in daily production use
+- value: "~935"
+  label: automated tests across those apps
+- value: "3"
+  label: "platforms shipped to: web, iOS, Android"

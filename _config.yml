@@ -20,13 +20,17 @@
 
 title: Rita Huang
 author: Rita Huang
-role: Full-stack Software Engineer
+role: Full-stack Engineer
+# Availability shown at the top of the home page.
+availability: Open to full-time remote roles · Available immediately
+location: Taiwan · Remote
+work_hours: 13:00–23:00 GMT+8 (most of the EU workday, US East Coast mornings)
 resume_url: "https://drive.google.com/file/d/1aEMDiWIX6l1A7LW_AGmPJ75SW0wt6RQN/view?usp=drive_link"
 email: yuhruhgrape@gmail.com
 lang: en
 description: >- # this means to ignore newlines until "baseurl:"
-  Rita Huang is a full-stack software engineer in Taiwan working in Ruby on Rails and TypeScript,
-  building web, mobile and AI-powered products.
+  Rita Huang is a full-stack engineer in Taiwan (remote) building production software across
+  API, web and mobile with TypeScript, NestJS, React, React Native and Ruby on Rails.
 google_analytics: UA-000000000-0
 timezone: Asia/Taipei
 show_excerpt: true
