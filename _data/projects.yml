@@ -1,0 +1,44 @@
+# Featured projects, newest first. `featured: true` shows the large card; others are listed compactly.
+- name: Household Tracker
+  year: "2026"
+  featured: true
+  image: /assets/images/householdLogo.png
+  live: https://household-tracker.up.railway.app
+  source: https://github.com/yuhruh/HouseHold_Notification
+  summary: >-
+    An installable web app (PWA) that replaced my family's Google Sheet of household bills.
+    Shared ledgers for a home or a company, with reminders before anything is due.
+  highlights:
+    - Daily reminder digest for every member by Web Push, email and an in-app inbox.
+    - Gas, electricity and water bills fill themselves in from the utility's site or bill emails, and are marked paid when the company says so.
+    - Scans Taiwan convenience-store bill barcodes and e-invoice QR codes to fill in records.
+    - Tracks household supplies and predicts the run-out date, with a restock alert in time to buy more.
+    - Recurring bills, receipt photos, expense charts, CSV import/export and a weekly Google Drive backup.
+  stack: [Rails 8, Hotwire, PostgreSQL, Web Push, PWA, Railway, i18n (zh-TW / EN)]
+
+- name: Pet Feeding Tracker
+  year: "2025 — 2026"
+  featured: true
+  image: /assets/images/ajiLogo.png
+  live: https://pet-feeding-tracker-v4.up.railway.app
+  source: https://github.com/yuhruh/Pet_Feeding_Tracker_v4
+  summary: >-
+    Started as a spreadsheet for my cats' meals, now in its fourth version: a feeding, health and
+    care tracker that a household shares, with a web app, a PWA and an Android app.
+  highlights:
+    - Scores each food from hunger, enjoyment, leftovers and how often the pet comes back to it, and keeps a favorites list.
+    - Predicts when each dry-food bag runs out from how fast the pet eats.
+    - Caregivers log feeding, litter, water and medicine with one tap, and every member's page updates live.
+    - A monthly job checks Taiwan shop prices for the favorite kibbles and ranks them by price per kg.
+    - Reads vet checkup photos with Google Gemini; reminders go out by Android push, LINE or email.
+  stack: [Rails 8.1, Hotwire, Hotwire Native (Android), Solid Queue, Solid Cable, PostgreSQL, Tailwind CSS, Gemini API, Railway]
+
+- name: Contact Manager
+  source: https://github.com/yuhruh/contact-manager
+  summary: Add, edit, delete and search contacts in a single-page app built on async requests.
+  stack: [JavaScript, HTML, CSS]
+
+- name: Pet Tracker (Sinatra)
+  source: https://github.com/yuhruh/Pet_Feeding_Record
+  summary: The first version of the pet feeding record, built with Sinatra.
+  stack: [Ruby, Sinatra, HTML, CSS]

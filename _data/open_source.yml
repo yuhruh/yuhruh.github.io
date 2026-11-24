@@ -1,0 +1,36 @@
+# Open-source contributions, newest first. status: merged | open
+- repo: serpapi/serpapi-ruby
+  title: Fix README async section, search_archive does not block
+  url: https://github.com/serpapi/serpapi-ruby/pull/48
+  date: Nov 2026
+  status: open
+
+- repo: serpapi/serpapi-javascript
+  title: Remove leftovers of the removed engine types from the docs
+  url: https://github.com/serpapi/serpapi-javascript/pull/61
+  date: Nov 2026
+  status: open
+
+- repo: serpapi/serpapi-cpp
+  title: Fix README install steps and supported C++ versions
+  url: https://github.com/serpapi/serpapi-cpp/pull/8
+  date: Nov 2026
+  status: open
+
+- repo: rails/rails
+  title: Fix extended deterministic queries on encrypted attributes that also use normalizes
+  url: https://github.com/rails/rails/pull/58866
+  date: Sep 2026
+  status: open
+
+- repo: svenfuchs/rails-i18n
+  title: Add missing keys and translations to zh-TW
+  url: https://github.com/svenfuchs/rails-i18n/pull/1171
+  date: May 2026
+  status: merged
+
+- repo: railsbridge/docs
+  title: Add sites.yml for the zh locale
+  url: https://github.com/railsbridge/docs/pull/710
+  date: Apr 2026
+  status: open

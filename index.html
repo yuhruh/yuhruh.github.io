@@ -1,0 +1,134 @@
+---
+layout: default
+---
+
+<section class="hero" aria-labelledby="hero-name">
+  <div class="hero-text">
+    <p class="eyebrow mono">$ whoami</p>
+    <h1 id="hero-name">Rita Huang</h1>
+    <p class="hero-role">Full-stack software engineer · Ruby on Rails &amp; TypeScript · Taiwan</p>
+    <p class="hero-lede">
+      I build products end to end: the web and mobile apps people use, and the APIs, background jobs
+      and AI pipelines behind them. I came to software from chemistry, and I still work like it's a lab:
+      reproduce the problem, find the root cause, fix it, then verify on every platform.
+    </p>
+    <ul class="hero-links">
+      <li><a class="btn btn-primary" href="{{ site.resume_url }}" target="_blank" rel="noopener">Résumé</a></li>
+      <li><a class="btn" href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a class="btn" href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a class="btn" href="mailto:{{ site.email }}">Email</a></li>
+    </ul>
+  </div>
+  <img class="hero-photo" src="{{ '/assets/images/about.jpg' | relative_url }}" alt="Portrait of Rita Huang" width="200" height="200">
+</section>
+
+<section id="what-i-do" class="section" aria-labelledby="what-title">
+  <h2 id="what-title" class="section-title"><span class="section-num mono">01</span>What I do</h2>
+  <div class="capabilities">
+    {%- for c in site.data.capabilities %}
+    <article class="capability">
+      <h3 class="capability-title">{{ c.title }}</h3>
+      <p>{{ c.summary }}</p>
+      <ul class="tags">
+        {%- for t in c.tags %}<li>{{ t }}</li>{% endfor %}
+      </ul>
+    </article>
+    {%- endfor %}
+  </div>
+</section>
+
+<section id="projects" class="section" aria-labelledby="projects-title">
+  <h2 id="projects-title" class="section-title"><span class="section-num mono">02</span>Projects</h2>
+
+  <div class="featured">
+    {%- for p in site.data.projects %}
+    {%- if p.featured %}
+    <article class="card">
+      <header class="card-head">
+        <div>
+          <h3 class="card-title">{{ p.name }}</h3>
+          <p class="card-year mono">{{ p.year }}</p>
+        </div>
+        {%- if p.image %}
+        <img class="card-logo" src="{{ p.image | relative_url }}" alt="" width="56" height="56">
+        {%- endif %}
+      </header>
+      <p>{{ p.summary }}</p>
+      <ul class="bullets">
+        {%- for h in p.highlights %}
+        <li>{{ h }}</li>
+        {%- endfor %}
+      </ul>
+      <ul class="tags" aria-label="Tech stack">
+        {%- for t in p.stack %}<li>{{ t }}</li>{% endfor %}
+      </ul>
+      <p class="card-links mono">
+        {%- if p.live %}<a href="{{ p.live }}" target="_blank" rel="noopener">live ↗</a>{% endif %}
+        {%- if p.source %}<a href="{{ p.source }}" target="_blank" rel="noopener">source ↗</a>{% endif %}
+      </p>
+    </article>
+    {%- endif %}
+    {%- endfor %}
+  </div>
+
+  <h3 class="subhead mono">Earlier projects</h3>
+  <ul class="rows">
+    {%- for p in site.data.projects %}
+    {%- unless p.featured %}
+    <li class="row">
+      <a class="row-title" href="{{ p.source | default: p.live }}" target="_blank" rel="noopener">{{ p.name }} ↗</a>
+      <span class="row-desc">{{ p.summary }}</span>
+      <span class="row-meta mono">{{ p.stack | join: ' · ' }}</span>
+    </li>
+    {%- endunless %}
+    {%- endfor %}
+  </ul>
+</section>
+
+<section id="open-source" class="section" aria-labelledby="oss-title">
+  <h2 id="oss-title" class="section-title"><span class="section-num mono">03</span>Open source</h2>
+  <ul class="rows">
+    {%- for c in site.data.open_source %}
+    <li class="row">
+      <a class="row-title" href="{{ c.url }}" target="_blank" rel="noopener">{{ c.title }} ↗</a>
+      <span class="row-meta mono">
+        {{ c.repo }} · {{ c.date }} · <span class="pill pill-{{ c.status }}">{{ c.status }}</span>
+      </span>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+
+<section id="skills" class="section" aria-labelledby="skills-title">
+  <h2 id="skills-title" class="section-title"><span class="section-num mono">04</span>Skills</h2>
+  <dl class="skills">
+    {%- for s in site.data.skills %}
+    <div class="skill-row">
+      <dt class="mono">{{ s.group }}</dt>
+      <dd>
+        <ul class="tags">
+          {%- for i in s.items %}<li>{{ i }}</li>{% endfor %}
+        </ul>
+      </dd>
+    </div>
+    {%- endfor %}
+  </dl>
+</section>
+
+<section id="about" class="section" aria-labelledby="about-title">
+  <h2 id="about-title" class="section-title"><span class="section-num mono">05</span>About</h2>
+  <div class="about prose">
+    <p>
+      I'm a Ruby on Rails developer based in Taiwan with a background in chemistry. Most of my side
+      projects start with a spreadsheet at home that has outgrown itself: my family's household bills
+      became Household Tracker, and my cats' feeding log became Pet Feeding Tracker.
+    </p>
+    <p>
+      I like deconstructing problems, writing down the root cause before the fix, and shipping in small,
+      reviewable steps. I also contribute to the Rails ecosystem, mostly fixes and zh-TW translations.
+    </p>
+    <p>
+      Away from the keyboard I read up on cat behavior 😼, do core workouts 💪 and practice yoga.
+    </p>
+  </div>
+</section>

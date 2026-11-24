@@ -1,0 +1,32 @@
+# General skills and experience, shown in the "What I do" section of the home page.
+# Keep this generic: no client, employer or product names, features or metrics
+# (see confidentiality obligations before adding anything work-specific).
+- title: Full-stack product engineering
+  summary: >-
+    I own features end to end, from the database and API to the screen people tap, and take
+    them from idea or bug report through to production.
+  tags: [Ruby on Rails, TypeScript, NestJS, PostgreSQL]
+
+- title: Web, PWA and mobile
+  summary: >-
+    Responsive web apps, installable PWAs and native Android apps built with Hotwire Native,
+    with push notifications and light and dark themes.
+  tags: [Hotwire, Tailwind CSS, Hotwire Native, Web Push, Firebase]
+
+- title: AI features in real products
+  summary: >-
+    LLM features that do a job for users, such as agent pipelines that call tools, pulling
+    structured data out of photos and documents, and keeping answers on topic.
+  tags: [OpenAI Agents SDK, Gemini API, Prompt design]
+
+- title: Integrations and payments
+  summary: >-
+    OAuth sign-in, app-store subscriptions, inbound email parsing, scraping public sites and
+    scheduled jobs that keep data in sync with third-party services.
+  tags: [OAuth, App Store / Google Play billing, Background jobs]
+
+- title: Shipping and debugging
+  summary: >-
+    Reproduce, find the root cause, fix, then verify on every platform. I write the bug up as
+    I go and ship through staging to production in small, reviewable pull requests.
+  tags: [Docker, Railway, CI, Code review]

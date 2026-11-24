@@ -1,0 +1,10 @@
+- group: Languages
+  items: [Ruby, TypeScript, JavaScript, SQL, HTML, CSS]
+- group: Backend
+  items: [Ruby on Rails, NestJS, Sinatra, PostgreSQL, SQLite, Redis, BullMQ, Solid Queue]
+- group: Frontend & mobile
+  items: ["Hotwire (Turbo, Stimulus)", Hotwire Native, Tailwind CSS, Vite, PWA, Web Push]
+- group: AI & integrations
+  items: [OpenAI Agents SDK, Gemini API, "OAuth (Google, Apple, LINE, GitHub)", Firebase, App Store / Google Play billing]
+- group: Infrastructure
+  items: [Docker, Railway, Render, Heroku, Git & GitHub]

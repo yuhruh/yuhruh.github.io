@@ -18,11 +18,15 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Hi, I am Rita 👋 
+title: Rita Huang
+author: Rita Huang
+role: Full-stack Software Engineer
+resume_url: "https://drive.google.com/file/d/1fVInxwiyuu4mX3hiTltXPavghAyFHowh/view?usp=sharing"
 email: yuhruhgrape@gmail.com
-language: en-us
+lang: en
 description: >- # this means to ignore newlines until "baseurl:"
-  
+  Rita Huang is a full-stack software engineer in Taiwan working in Ruby on Rails and TypeScript,
+  building web, mobile and AI-powered products.
 google_analytics: UA-000000000-0
 timezone: Asia/Taipei
 show_excerpt: true
