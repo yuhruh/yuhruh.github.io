@@ -1,7 +1,7 @@
 - group: Languages
   items: [Ruby, TypeScript, JavaScript, SQL, HTML, CSS]
 - group: Backend
-  items: [Ruby on Rails, NestJS, Sinatra, PostgreSQL, SQLite, Redis, BullMQ, Solid Queue]
+  items: [Ruby on Rails, NestJS, Sinatra, PostgreSQL, SQLite, Redis, Solid Queue]
 - group: Frontend & mobile
   items: ["Hotwire (Turbo, Stimulus)", Hotwire Native, Tailwind CSS, Vite, PWA, Web Push]
 - group: AI & integrations
