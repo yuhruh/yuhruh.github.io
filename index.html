@@ -114,7 +114,7 @@ layout: default
         </ul>
         <div class="card-actions">
           {%- if p.source %}<a class="btn btn-sm btn-primary" href="{{ p.source }}" target="_blank" rel="noopener">View code ↗</a>{% endif %}
-          {%- if p.live %}<a class="btn btn-sm" href="{{ p.live }}" target="_blank" rel="noopener">Live app ↗</a>{% endif %}
+          {%- if p.live %}<a class="btn btn-sm" href="{{ p.live }}" target="_blank" rel="noopener">{{ p.live_label | default: "Live app" }} ↗</a>{% endif %}
           {%- for d in p.docs %}<a class="btn btn-sm" href="{{ d.url }}" target="_blank" rel="noopener">{{ d.label }} ↗</a>{% endfor %}
           {%- if p.ci_badge %}<a class="ci-badge" href="{{ p.ci_url }}" target="_blank" rel="noopener"><img src="{{ p.ci_badge }}" alt="{{ p.name }} CI status" height="20" loading="lazy"></a>{% endif %}
         </div>

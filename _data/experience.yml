@@ -19,6 +19,18 @@
     - lead: AI-assisted, human-owned delivery
       text: Designed a Claude Code pipeline where every ticket runs in its own git worktree, with a root-cause write-up and plan I approve, then implementation, tests on web, iOS and Android, and a reviewed PR. Added a self-hosted Ubuntu server to run tickets in parallel.
 
+- role: Career transition
+  org: Career break
+  note: Taiwan, Remote
+  period: 2023.05 — 2026.06
+  tagline: From materials and process engineering into software
+  stack: [Ruby, Rails 8, Hotwire, PostgreSQL, Solid Queue, Minitest]
+  points:
+    - lead: Launch School
+      text: Completed Launch School's mastery-based software engineering program.
+    - lead: Two apps end to end
+      text: Designed, built and now run Pet Tracker and Household Tracker (see Projects), both Ruby on Rails 8 apps in daily use.
+
 - role: Global Process Engineer
   org: Isola Group
   period: 2018 — 2023

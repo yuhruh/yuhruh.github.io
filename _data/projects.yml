@@ -8,6 +8,7 @@
   poster: /assets/images/household-intro-poster.jpg
   video_label: A 100-second walkthrough of Household Tracker on a phone
   live: https://household-tracker.up.railway.app
+  live_label: Live app (invite-only)
   source: https://github.com/yuhruh/HouseHold_Notification
   ci_badge: https://github.com/yuhruh/HouseHold_Notification/actions/workflows/ci.yml/badge.svg
   ci_url: https://github.com/yuhruh/HouseHold_Notification/actions/workflows/ci.yml
@@ -37,6 +38,7 @@
   poster: /assets/images/pet-tracker-intro-poster.jpg
   video_label: An 85-second walkthrough of Pet Tracker on a phone
   live: https://pet-feeding-tracker-v4.up.railway.app
+  live_label: Live app (invite-only)
   source: https://github.com/yuhruh/Pet_Feeding_Tracker_v4
   ci_badge: https://github.com/yuhruh/Pet_Feeding_Tracker_v4/actions/workflows/ci.yml/badge.svg
   ci_url: https://github.com/yuhruh/Pet_Feeding_Tracker_v4/actions/workflows/ci.yml
@@ -67,7 +69,7 @@
   summary: Add, edit, delete and search contacts in a single-page app built on async requests.
   stack: [JavaScript, HTML, CSS]
 
-- name: Pet Tracker (Sinatra)
+- name: Pet Feeding Record (Sinatra)
   source: https://github.com/yuhruh/Pet_Feeding_Record
-  summary: The first version of the pet feeding record, built with Sinatra.
+  summary: The first prototype of what became Pet Tracker, built with Sinatra.
   stack: [Ruby, Sinatra, HTML, CSS]
