@@ -3,7 +3,7 @@
   title: Fix README async section, search_archive does not block
   url: https://github.com/serpapi/serpapi-ruby/pull/48
   date: Nov 2026
-  status: open
+  status: merged
 
 - repo: serpapi/serpapi-javascript
   title: Remove leftovers of the removed engine types from the docs
