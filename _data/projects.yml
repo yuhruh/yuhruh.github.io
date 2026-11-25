@@ -50,12 +50,16 @@
     - ~570 tests (56 browser)
     - Web · PWA · Android
   points:
-    - lead: Live, shared UI
+    - lead: Collaboration
       text: Owners invite caregivers and share read-only links, with one role policy behind every permission. One-tap care logs appear live on everyone's page via Turbo Streams.
+    - lead: Price scraping
+      text: Monthly Nokogiri scraper across two Taiwan shopping sites (BigGo HTML, PChome JSON API), ranking listings by NT$ per kg. Selectors survive hashed class names that change on redeploy; a changed layout is told apart from "no results" and raises an alert; requests are rate-limited and follow robots.txt; tested against saved HTML fixtures.
     - lead: Background work
-      text: Reminders at each household's local time with fallback from Android push to LINE to email, plus a monthly Nokogiri job that ranks favorite kibbles by price per kg.
+      text: Care reminders at each household's local time, with fallback from Android push to LINE to email.
     - lead: Unstructured to structured
-      text: Health-checkup photos become records through Gemini vision and validated mapping into ActiveRecord models, with security audits in CI.
+      text: Gemini vision turns varied health-checkup photos into validated ActiveRecord records.
+    - lead: Testing and CI
+      text: Minitest suite with browser tests, plus Brakeman, RuboCop and dependency audits in CI.
   stack: [Rails 8.1, PostgreSQL, Hotwire, Hotwire Native (Kotlin), Tailwind CSS, Solid Queue, Nokogiri, Gemini, Railway]
 
 - name: Contact Manager

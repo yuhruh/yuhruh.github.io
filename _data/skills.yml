@@ -1,11 +1,11 @@
 # Mirrors the résumé's Technical Skills section.
+- group: Backend
+  items: [NestJS, Node, RESTful API design, Ruby on Rails 8, ActiveRecord, Solid Queue, OAuth, Webhooks]
 - group: Languages
   items: [TypeScript, "JavaScript (ES6+)", Ruby, SQL, HTML / CSS]
 - group: Frontend & mobile
   items: [React, React Native, Tailwind CSS, "Hotwire (Turbo / Stimulus)", PWA / Web Push, Apache ECharts]
-- group: Backend
-  items: [NestJS, Node, RESTful API design, Ruby on Rails 8, ActiveRecord, Solid Queue, OAuth, Webhooks]
 - group: Data, infra & quality
   items: [PostgreSQL, Railway / Render / Heroku, Sentry, GitHub Actions, Minitest, Brakeman, RuboCop]
 - group: AI
-  items: [Gemini vision & API / CLI, LLM agent tooling, Claude Code]
+  items: [Gemini vision API, LLM agent tooling, Claude Code]

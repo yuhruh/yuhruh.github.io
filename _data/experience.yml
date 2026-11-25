@@ -5,25 +5,25 @@
   org: Early-stage US startup
   note: Independent Contractor, Remote
   period: 2026.07 — Present
-  tagline: Production software on web, iOS and Android
+  tagline: Production app on web, iOS and Android
   stack: [TypeScript, NestJS, PostgreSQL, React, React Native]
   points:
-    - lead: Backend and data
-      text: Design NestJS REST endpoints and PostgreSQL schema changes. Consolidated business rules that had drifted apart into one server-side resolver, and integrated in-app purchases on iOS and Android.
-    - lead: Cross-platform UI
-      text: Built a TypeScript code-generation pipeline that emits type-safe Swift and Kotlin code from one source of truth, and moved hard-coded styling onto design tokens for shared light / dark theming.
-    - lead: Reliability
-      text: Added per-device delivery receipts to push notifications. Made webhook and inbound-email integrations fail loudly instead of silently dropping data.
+    - lead: API and data model
+      text: Design NestJS REST endpoints and PostgreSQL schema changes. Merged business rules that had drifted apart across clients into one server-side resolver, so API, web and mobile enforce the same rules; integrated in-app purchases on iOS and Android.
+    - lead: Type-safe contracts
+      text: Built a TypeScript code-generation pipeline that emits Swift and Kotlin from one schema, replacing duplicated hand-written code; moved hard-coded styling onto shared design tokens for light / dark theming.
+    - lead: Integration reliability
+      text: Added per-device delivery receipts to push notifications; changed webhook and inbound-email handlers that reported success while dropping data so they fail loudly instead.
     - lead: Production debugging
-      text: Own QA-reported bugs end to end in a codebase I joined mid-flight, from root cause to tested builds on all three platforms, including time-zone bugs from date math done in UTC.
-    - lead: AI-assisted, human-owned workflow
-      text: Designed a Claude Code pipeline in which every ticket runs in an isolated git worktree, with a root-cause write-up and plan that I review and approve before implementation, tests and a reviewed PR.
+      text: Own QA-reported bugs from root cause to tested builds on all three platforms in a codebase I joined mid-project, including time-zone bugs caused by computing weeks in UTC.
+    - lead: AI-assisted, human-owned delivery
+      text: Designed a Claude Code pipeline where every ticket runs in its own git worktree, with a root-cause write-up and plan I approve, then implementation, tests on web, iOS and Android, and a reviewed PR. Added a self-hosted Ubuntu server to run tickets in parallel.
 
 - role: Global Process Engineer
   org: Isola Group
   period: 2018 — 2023
   points:
-    - text: Led cross-functional process engineering, resolving raw-material and process bottlenecks with durable corrective actions.
+    - text: Led cross-functional fixes for raw-material and process bottlenecks.
 
 - role: R&D Engineer
   org: Nan Ya Plastics
