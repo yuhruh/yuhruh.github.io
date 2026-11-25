@@ -22,11 +22,23 @@
 - role: Global Process Engineer
   org: Isola Group
   period: 2018 — 2023
+  tagline: Copper-clad laminates for printed circuit boards
   points:
-    - text: Led cross-functional fixes for raw-material and process bottlenecks.
+    - lead: Cross-site programs
+      text: Led international product development projects with R&D, production and customer teams across sites, delivering complex technical programs on schedule.
+    - lead: Root-cause analysis
+      text: Resolved raw-material and process bottlenecks through root-cause analysis and durable corrective actions.
+    - lead: Data
+      text: Built materials BOMs in SAP and analyzed production data to compare new products against existing ones.
 
-- role: R&D Engineer
+- role: R&D, Quality and Technical Support Engineer
   org: Nan Ya Plastics
   period: 2013 — 2017
+  tagline: Copper foil and PCB materials
   points:
-    - text: Ran a copper foil quality program that produced a $3.0M/month revenue increase.
+    - lead: Customer impact
+      text: Led a copper-foil quality evaluation project that produced a $3.0M/month revenue increase; turned client feedback into technical fixes and a quality-management process the team adopted.
+    - lead: Quality systems
+      text: Prepared APQP / PPAP documentation for automotive certification and audited the production line against standard operating procedures.
+    - lead: R&D
+      text: Introduced a measurement method that cut deviation by 60% in PCB formulation studies and scaled it up through plant trials; drafted 10 patent specifications for rights across Asia-Pacific.
