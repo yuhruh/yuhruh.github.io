@@ -16,19 +16,23 @@
     - label: Design decisions (6 ADRs)
       url: https://github.com/yuhruh/HouseHold_Notification/tree/main/docs/adr
   summary: >-
-    A shared bill tracker (PWA) in zh-TW and English that replaced my family's Google Sheet.
+    A shared bill and household-supplies tracker (PWA) in zh-TW and English that replaced my family's Google Sheet.
   metrics:
     - In daily use
-    - ~365 tests
+    - ~730 tests
     - zh-TW / EN
   points:
     - lead: Sheet to product
-      text: Shared ledgers with one-step bill entry by scanning a Taiwan bill's barcode, recurring bills that never duplicate, expense charts, and a preview-then-commit CSV import that is safe to re-run.
+      text: Shared ledgers with one-step bill entry by scanning a Taiwan bill's barcodes (or reading a bill PDF or photo), recurring bills that never duplicate, expense charts, and a preview-then-commit CSV import that is safe to re-run.
+    - lead: Bills that fill themselves in
+      text: A daily job syncs gas bills from the utility's site; electricity and water bills arrive as forwarded e-bill emails, read through the Gmail API only when the company signed them. Each bill is matched to its period, never added twice, and marked paid when the company says so.
+    - lead: Supplies and run-out forecasts
+      text: Tracks household stock from product barcodes, Taiwan e-invoice QR codes and invoice PDFs, estimates each item's usage rate and run-out date, and sends a restock alert in time to buy more.
     - lead: Reliable reminders
       text: One daily digest per member in their own time zone, by Web Push, email and in-app inbox. Unique indexes act as locks so a double run never sends twice, and push counts as delivered only after the device confirms it.
     - lead: Operations and testing
-      text: Encrypted weekly database backups plus a Google Drive backup. Brakeman, RuboCop and dependency audits run in GitHub Actions.
-  stack: [Rails 8.1, PostgreSQL, Hotwire, Web Push, Tailwind CSS, Solid Queue, Apache ECharts, Sentry, Railway]
+      text: Encrypted weekly database backups plus a Google Drive backup. Brakeman, RuboCop and dependency audits run in GitHub Actions, and security-scan findings are fixed as they come in.
+  stack: [Rails 8.1, PostgreSQL, Hotwire, Web Push, Gmail API, Google Drive API, Tailwind CSS, Solid Queue, Apache ECharts, Sentry, Railway]
 
 - name: Pet Tracker
   year: 2025.02 — Present
@@ -46,30 +50,31 @@
     - label: Architecture
       url: https://github.com/yuhruh/Pet_Feeding_Tracker_v4/blob/main/ARCHITECTURE.md
   summary: >-
-    A Rails 8 pet-care app for households, on web, PWA and Android.
+    A Rails 8 pet-care app for households, on web, PWA and Android, in English, 繁體中文 and 日本語.
   metrics:
     - In daily use
-    - ~570 tests (56 browser)
+    - ~700 tests (61 browser)
     - Web · PWA · Android
+    - EN / zh-TW / JA
   points:
     - lead: Collaboration
       text: Owners invite caregivers and share read-only links, with one role policy behind every permission. One-tap care logs appear live on everyone's page via Turbo Streams.
     - lead: Price scraping
       text: Monthly Nokogiri scraper across two Taiwan shopping sites (BigGo HTML, PChome JSON API), ranking listings by NT$ per kg. Selectors survive hashed class names that change on redeploy; a changed layout is told apart from "no results" and raises an alert; requests are rate-limited and follow robots.txt; tested against saved HTML fixtures.
     - lead: Background work
-      text: Care reminders at each household's local time, with fallback from Android push to LINE to email.
+      text: Care and weight reminders at each household's local time, with fallback from Android push (Firebase) to LINE to email, plus daily Google Drive backups at each owner's chosen hour.
     - lead: Unstructured to structured
       text: Gemini vision turns varied health-checkup photos into validated ActiveRecord records.
     - lead: Testing and CI
-      text: Minitest suite with browser tests, plus Brakeman, RuboCop and dependency audits in CI.
-  stack: [Rails 8.1, PostgreSQL, Hotwire, Hotwire Native (Kotlin), Tailwind CSS, Solid Queue, Nokogiri, Gemini, Railway]
+      text: Minitest suite with browser tests, plus Brakeman, RuboCop and dependency audits in CI; security reviews and their open items are written up in the architecture doc.
+  stack: [Rails 8.1, PostgreSQL, Hotwire, Hotwire Native (Kotlin), Firebase Cloud Messaging, Tailwind CSS, Solid Queue, Nokogiri, Gemini, Railway]
 
 - name: Contact Manager
   source: https://github.com/yuhruh/contact-manager
   summary: Add, edit, delete and search contacts in a single-page app built on async requests.
   stack: [JavaScript, HTML, CSS]
 
-- name: Pet Feeding Record (Sinatra)
-  source: https://github.com/yuhruh/Pet_Feeding_Record
-  summary: The first prototype of what became Pet Tracker, built with Sinatra.
-  stack: [Ruby, Sinatra, HTML, CSS]
+- name: Pet Feeding Tracker v2
+  source: https://github.com/yuhruh/Pet_Feeding_Tracker_v2
+  summary: An earlier version of Pet Tracker that charts daily dry and wet food intake and scores favorite foods.
+  stack: [Ruby on Rails, Chartkick, Heroku]

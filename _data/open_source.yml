@@ -1,4 +1,16 @@
 # Open-source contributions, newest first. status: merged | open
+- repo: abhigyanpatwari/GitNexus
+  title: Restore web chat history across page reloads
+  url: https://github.com/abhigyanpatwari/GitNexus/pull/4152
+  date: Nov 2026
+  status: open
+
+- repo: abhigyanpatwari/GitNexus
+  title: Replace scattered console.log calls with a dev-only debug logger
+  url: https://github.com/abhigyanpatwari/GitNexus/pull/4147
+  date: Nov 2026
+  status: open
+
 - repo: serpapi/serpapi-ruby
   title: Fix README async section, search_archive does not block
   url: https://github.com/serpapi/serpapi-ruby/pull/48
